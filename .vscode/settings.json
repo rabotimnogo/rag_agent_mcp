@@ -1,0 +1,4 @@
+{
+    "editor.defaultFoldingRangeProvider": "ms-python.black-formatter",
+    "editor.inlineSuggest.triggerCommandOnProviderChange": true
+}

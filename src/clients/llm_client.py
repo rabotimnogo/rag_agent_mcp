@@ -7,10 +7,6 @@ load_dotenv()
 
 
 class LLMClient:
-    """
-    Vibecode жесткий
-    """
-
     def __init__(self, config: AgentConfig):
         self.config = config
         self.client = OpenAI(

@@ -1,9 +1,7 @@
-import os
-
 from dotenv import load_dotenv
 
-from openai import AsyncOpenAI
-from .config import AgentConfig
+from openai import OpenAI
+from src.agent.config import AgentConfig
 
 load_dotenv()
 
@@ -15,7 +13,9 @@ class LLMClient:
 
     def __init__(self, config: AgentConfig):
         self.config = config
-        self.client = AsyncOpenAI(api_key=config.api_key)
+        self.client = OpenAI(
+            api_key=config.api_key, base_url="https://openrouter.ai/api/v1"
+        )
 
     async def complete(self, messages: list[dict], tools: list[dict] | None = None):
         return await self.client.chat.completions.create(

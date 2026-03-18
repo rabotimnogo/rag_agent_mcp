@@ -1,7 +1,10 @@
 import asyncio
+from src.workers.worker import Worker
 
 
 async def main():
+    worker = Worker()
+    await worker.run()
     print("Rabotaet")
 
 

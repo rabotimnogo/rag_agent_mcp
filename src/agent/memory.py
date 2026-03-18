@@ -19,7 +19,7 @@ class BaseMemory(ABC):
     def clear(self) -> None: ...
 
 
-class SimpleMemory(BaseMemory):
+class ChatMemory(BaseMemory):
     def __init__(self, system_prompt: str):
         self._messages = [{"role": "system", "content": system_prompt}]
 

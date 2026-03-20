@@ -1,8 +1,8 @@
 import os
 from dotenv import load_dotenv
 from pydantic import BaseModel
-from src.constants.models.models import MODEL_NAME
-from src.constants.prompts.system_prompt import SYSTEM_PROMPT
+from src.constants.model_names.models_name import MODEL_NAME
+from prompts.system_prompt import SYSTEM_PROMPT
 
 load_dotenv()
 

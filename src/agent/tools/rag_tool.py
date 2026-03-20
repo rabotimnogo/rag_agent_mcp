@@ -1,21 +1,23 @@
+import pandas as pd
+
 from pydantic import BaseModel
 from .base import BaseTool
 
 
-class WeatherArgs(BaseModel):
-    city: str
+class ShemaRAG(BaseModel):
+    query: str
 
 
-class WeatherTool(BaseTool):
+class ToolRAG(BaseTool):
     """
     Конкретный тул — минимум кода благодаря BaseTool.
     Вся бизнес-логика только в execute().
     Добавить новый тул = создать новый файл по этому шаблону.
     """
 
-    name = "get_weather"
-    description = "Получить погоду в городе"
-    args_schema = WeatherArgs
+    name = "rag_tool"
+    description = "Cходить в RAG, получить какую-то хуйню"
+    args_schema = ShemaRAG
 
-    def execute(self, city: str) -> str:
-        return f"В {city} сейчас 19°C"
+    def execute(self, query: str) -> str:
+        return ["Ты пидорас"]

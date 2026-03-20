@@ -5,11 +5,11 @@ from src.clients.llm_client import LLMClient
 from src.agent.config import config
 from src.agent.memory import ChatMemory
 from src.agent.tools.registry import ToolRegistry
-from src.agent.tools.weather_tool import WeatherTool
+from agent.tools.rag_tool import WeatherTool
 from src.agent.runner import AgentRunner
 
-from src.constants.models.models import MODEL_NAME
-from src.constants.prompts.system_prompt import SYSTEM_PROMPT
+from src.constants.model_names.models_name import MODEL_NAME
+from prompts.system_prompt import SYSTEM_PROMPT
 
 
 from src.agent.config import config

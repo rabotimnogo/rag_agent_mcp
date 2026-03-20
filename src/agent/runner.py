@@ -1,7 +1,7 @@
 import json
 from src.clients.llm_client import LLMClient
 from src.agent.memory import BaseMemory
-from src.agent.config import AgentConfig
+from src.agent.tools.config import AgentConfig, config
 from src.agent.tools.registry import ToolRegistry
 
 
